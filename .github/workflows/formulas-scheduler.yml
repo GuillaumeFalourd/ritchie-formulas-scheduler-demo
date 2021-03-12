@@ -25,7 +25,7 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
-             apk update && --no-cache curl bash sudo
+             apk update && apk add --no-cache curl bash sudo
              curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
              echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
              echo '{"provider":"Github", "name":"demo", "url":"https://github.com/ZupIT/ritchie-formulas-demo", "priority":1}' | rit add repo --stdin
