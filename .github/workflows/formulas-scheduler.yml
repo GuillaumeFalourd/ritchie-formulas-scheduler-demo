@@ -6,15 +6,27 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:   
-      - uses: docker://ritclizup/rit-go-runner
-      - id: execute-hello-world-formula
-        name: Execute Ritchie Formula Hello World
-        run: |
-            curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
-            echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
-            echo '{"provider":"Github", "name":"demo", "url":"https://github.com/ZupIT/ritchie-formulas-demo", "priority":1}' | rit add repo --stdin
-            rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:   
+#       - uses: docker://ritclizup/rit-go-runner
+#       - id: execute-hello-world-formula
+#         name: Execute Ritchie Formula Hello World
+#         run: |
+#             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
+#             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
+#             echo '{"provider":"Github", "name":"demo", "url":"https://github.com/ZupIT/ritchie-formulas-demo", "priority":1}' | rit add repo --stdin
+#             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
         
+  container:
+      runs-on: ubuntu-latest
+      container: docker://ritclizup/rit-go-builder
+      steps:
+        - id: execute-hello-world-formula
+          name: Execute Ritchie Formula Hello World
+          run: |
+             apk update && --no-cache curl bash sudo
+             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
+             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
+             echo '{"provider":"Github", "name":"demo", "url":"https://github.com/ZupIT/ritchie-formulas-demo", "priority":1}' | rit add repo --stdin
+             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
