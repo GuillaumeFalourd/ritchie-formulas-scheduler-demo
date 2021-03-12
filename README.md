@@ -2,4 +2,4 @@
 
 # formulas-scheduler
 
-Repository with a Github Action workflow example to execute specific formulas from time to time using [CRON](https://crontab.guru/#*_*_*_*_*)
+Repository with a Github Action workflow example to execute specific Ritchie CLI formulas using [CRON](https://crontab.guru/#*_*_*_*_*).
