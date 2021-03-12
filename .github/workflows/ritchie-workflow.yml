@@ -2,7 +2,7 @@ name: Ritchie Workflow
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   build:
