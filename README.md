@@ -2,4 +2,4 @@
 
 # formulas-scheduler
 
-Repository with a Github Action workflow to execute specific formulas from time to time.
+Repository with a Github Action workflow example to execute specific formulas from time to time using [CRON](https://crontab.guru/#*_*_*_*_*)
