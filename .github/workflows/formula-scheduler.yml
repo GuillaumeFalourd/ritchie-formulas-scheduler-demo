@@ -1,4 +1,4 @@
-name: Ritchie Hello World Scheduler
+name: Formulas Scheduler
 
 on:
   schedule:
@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+    steps:   
       - uses: docker://ritclizup/rit-go-runner
       - id: execute-hello-world-formula
         name: Execute Ritchie Formula Hello World
