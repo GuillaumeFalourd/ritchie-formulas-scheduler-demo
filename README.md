@@ -1,4 +1,4 @@
-[![Ritchie Hello World Scheduler](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/formula-scheduler.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/formulas-scheduler.yml)
+[![Formulas Scheduler](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/formulas-scheduler.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/formulas-scheduler.yml)
 
 # formulas-scheduler
 
