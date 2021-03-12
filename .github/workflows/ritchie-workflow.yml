@@ -1,0 +1,17 @@
+name: Ritchie Workflow
+
+on:
+  schedule: # execute every 2 minutes
+    - cron: "*/2 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: docker://ritclizup/rit-go-runner
+      - id: execute-formula-command
+        name: Execute Ritchie Formula Command
+        run: |
+            echo '{"provider":"Github", "name":"demo", "url":"https://github.com/ZupIT/ritchie-formulas-demo", "priority":1}' | rit add repo --stdin
+            rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
