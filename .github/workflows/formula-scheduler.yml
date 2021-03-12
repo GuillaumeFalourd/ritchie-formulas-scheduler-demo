@@ -1,4 +1,4 @@
-name: Hello World Workflow
+name: Ritchie Hello World Scheduler
 
 on:
   schedule:
