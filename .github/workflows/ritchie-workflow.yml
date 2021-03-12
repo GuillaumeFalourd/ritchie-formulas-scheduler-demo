@@ -1,8 +1,8 @@
 name: Ritchie Workflow
 
 on:
-  schedule: # execute every 2 minutes
-    - cron: "*/2 * * * *"
+  schedule:
+    - cron: "* * * * *"
 
 jobs:
   build:
