@@ -2,6 +2,8 @@
 
 [![Formulas Scheduler Container](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/formulas-scheduler-container.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/formulas-scheduler-container.yml)
 
+[![Formulas Scheduler Secrets](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/formulas-scheduler-secrets.yml/badge.svg)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/formulas-scheduler-secrets.yml)
+
 # Formulas-scheduler
 
 Repository with a Github Action workflow example to execute specific Ritchie CLI formulas using [CRON](https://crontab.guru/#*_*_*_*_*).
