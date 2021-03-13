@@ -1,4 +1,4 @@
-name: Formulas Scheduler Container Own
+name: Formulas Scheduler Teste
 
 on:
   schedule:
