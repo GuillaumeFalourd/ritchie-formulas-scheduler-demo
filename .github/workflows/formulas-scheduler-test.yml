@@ -17,13 +17,24 @@ on:
 #              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
 #              rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
 
+# jobs:
+#   container:
+#       runs-on: ubuntu-latest
+#       container: docker://guillaumefalourd/ritchiecli:shell-bat
+#       steps:
+#         - id: execute-hello-world-formula
+#           name: Execute Ritchie Formula Hello World
+#           run: |
+#               rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+#               rit demo coffee-shell --rit_name="Dennis" --rit_coffee_type="espresso" --rit_delivery=true
+              
 jobs:
-  container:
-      runs-on: ubuntu-latest
-      container: docker://guillaumefalourd/ritchiecli:shell-bat
-      steps:
-        - id: execute-hello-world-formula
-          name: Execute Ritchie Formula Hello World
-          run: |
-              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-              rit demo coffee-shell --rit_name="Dennis" --rit_coffee_type="espresso" --rit_delivery=true
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: docker://guillaumefalourd/ritchiecli:go-1.15.8
+      - id: execute-hello-world-formula
+        name: Execute Ritchie Formula Hello World
+        run: |
+            rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+            rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
