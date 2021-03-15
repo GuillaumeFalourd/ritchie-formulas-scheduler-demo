@@ -8,7 +8,7 @@ on:
 jobs:
   container:
       runs-on: ubuntu-latest
-      container: docker://guillaumefalourd/ritchiecli:go-1.15.8
+      container: docker://guillaumefalourd/ritchiecli:go-test
       steps:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
