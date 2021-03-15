@@ -14,7 +14,7 @@ It is also possible to use formulas with credentials adding [new secrets](https:
 
 When you set up a GitHub Actions workflow with a **schedule**, say for once every 10 minutes, you're essentially requesting GitHub to schedule that workflow for you. There is no guarantee that the workflow will run every 10 minutes. 
 
-In a discussion in the GitHub Support Community [No assurance on scheduled jobs?](https://github.community/t/no-assurance-on-scheduled-jobs/133753), Github partner @brightran](https://github.community/u/brightran/summary) said that many times, there may be a delay when triggering the scheduled workflow:
+In a discussion in the GitHub Support Community ([No assurance on scheduled jobs?](https://github.community/t/no-assurance-on-scheduled-jobs/133753)), Github partner @brightran](https://github.community/u/brightran/summary) said that many times, there may be a delay when triggering the scheduled workflow:
 
 > Generally, the delay time is about 3 to 10 minutes. Sometimes, it may
 > be more, even dozens of minutes, or more than one hour.
