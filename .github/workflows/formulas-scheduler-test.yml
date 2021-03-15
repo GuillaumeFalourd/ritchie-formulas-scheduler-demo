@@ -26,4 +26,4 @@ jobs:
           name: Execute Ritchie Formula Hello World
           run: |
               echo '{"provider":"Github", "name":"demo", "url":"https://github.com/ZupIT/ritchie-formulas-demo", "priority":1}' | rit add repo --stdin
-              rit demo hello-world --name="Dennis" --coffee_type="expresso" --delivery=true
+              rit demo coffee-shell --name="Dennis" --coffee_type="expresso" --delivery=true
