@@ -17,13 +17,10 @@ jobs:
              rit -v
              echo "PATH -------------"
              find / -name ".rit"
-             echo "HOME -------------"
-             pwd
-             ls
              echo "RIT -------------"
-             ls -lha $HOME/.rit
+             ls -lha /root/.rit
              echo "DEFAULT RUNNER -------------"
-             cat $HOME/.rit/default-formula-runner
+             cat /root/.rit/default-formula-runner
              echo "FORMULA -------------"
              rit set formula-runner --runner="local"
              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
