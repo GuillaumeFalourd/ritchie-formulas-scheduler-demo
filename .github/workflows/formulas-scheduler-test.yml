@@ -14,10 +14,12 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
-             pwd
              rit -v
+             echo "PATH -------------"
+             find / -name ".rit"
              echo "HOME -------------"
-             ls $HOME
+             pwd
+             ls
              echo "RIT -------------"
              ls -lha $HOME/.rit
              echo "DEFAULT RUNNER -------------"
