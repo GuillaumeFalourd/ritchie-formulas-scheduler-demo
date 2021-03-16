@@ -14,13 +14,15 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
-             echo "-------------"
+             echo "PWD -------------"
              pwd
-             echo "-------------"
+             echo "HOME -------------"
+             ls -lha $HOME
+             echo "RIT -------------"
              ls -lha $HOME/.rit
-             echo "-------------"
+             echo "DEFAULT RUNNER -------------"
              cat $HOME/.rit/default-formula-runner
-             echo "-------------"
+             echo "FORMULA -------------"
              rit set formula-runner --runner="local"
              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
              rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
