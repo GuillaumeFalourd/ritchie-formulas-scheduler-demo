@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: execute-hello-world-formula
-        name: Formula Hello World (Golang) execution
+        name: Ritchie Formula Hello World (Golang) Execution
         run: |
             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
