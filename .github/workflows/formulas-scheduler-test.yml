@@ -14,6 +14,7 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
+             apt-get install coreutils
              rit -v
              echo "PATH -------------"
              find / -name ".rit"
@@ -23,6 +24,8 @@ jobs:
              cat /root/.rit/default-formula-runner
              echo "FORMULA -------------"
              rit set formula-runner --runner="local"
+             cat /root/.rit/default-formula-runner
+             echo "REPO -------------"
              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
              rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
 
