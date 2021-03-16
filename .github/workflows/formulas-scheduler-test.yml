@@ -14,6 +14,8 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
+             export RIT_PATH=/root/.rit
+             PATH=$RIT_PATH/bin:$PATH
              rit -v
              echo "PATH -------------"
              find / -name ".rit"
