@@ -6,15 +6,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  container:
+  build:
       runs-on: ubuntu-latest
-      container: docker://ritclizup/rit-go-builder
+      container: docker://guillaumefalourd/ritchiecli:go-1.15.8
       steps:
         - id: execute-hello-world-formula
-          name: Execute Ritchie Formula Hello World
+          name: Ritchie Formula Hello World (Golang) Execution
           run: |
-             apk update && apk add --no-cache curl bash sudo
-             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
              echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
              rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
