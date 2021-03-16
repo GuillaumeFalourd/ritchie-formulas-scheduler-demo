@@ -22,11 +22,13 @@ jobs:
              echo "RIT DEFAULT RUNNER -------------"
              cat /root/.rit/default-formula-runner
              echo ""
+             rit show formula-runner
              echo "SET DEFAULT RUNNER -------------"
              rit set formula-runner --runner="local"
              echo "RIT DEFAULT RUNNER -------------"
              cat /root/.rit/default-formula-runner
              echo ""
+             rit show formula-runner
              echo "/RIT -------------"
              ls -lha /root/.rit
              echo "RIT ADD REPO -------------"
