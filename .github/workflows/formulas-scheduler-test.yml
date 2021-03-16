@@ -16,7 +16,6 @@ jobs:
           run: |
              pwd
              ls -lha
-             rit set formula-runner --runner="local"
              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
              rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
 
