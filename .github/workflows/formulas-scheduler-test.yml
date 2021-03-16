@@ -14,6 +14,8 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
+             wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.0.1ubuntu2.17_amd64.deb -O apt.deb
+             sudo dpkg -i apt.deb
              apt-get install coreutils
              rit -v
              echo "PATH -------------"
