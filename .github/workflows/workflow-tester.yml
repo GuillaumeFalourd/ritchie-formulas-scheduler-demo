@@ -1,8 +1,24 @@
-name: Formulas Scheduler Test
+name: Workflow Tester
 
 on:
 #  schedule:
 #  - cron: "0 16 * * *"
+
+# Trigger the workflow on push or pull request,
+# but only for the main branch
+  push:
+    branches:
+      - main
+      - release-**
+  
+    tags:
+      - 1.*
+      - 2.*
+      
+  pull_request:
+    branches:
+      - main
+      
   workflow_dispatch:
 
 jobs:
