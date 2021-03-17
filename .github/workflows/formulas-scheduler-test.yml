@@ -25,22 +25,23 @@ jobs:
              ls -lha /github/home
              cp -r /root/.rit /github/home
              ls -lha /github/home
-             echo "RIT DEFAULT RUNNER -------------"
-             cat /root/.rit/default-formula-runner
-             echo ""
-             rit show formula-runner
-             echo "SET DEFAULT RUNNER -------------"
-             rit set formula-runner --runner="local"
-             echo "RIT DEFAULT RUNNER -------------"
-             cat /root/.rit/default-formula-runner
-             echo ""
-             rit show formula-runner
-             echo "/RIT -------------"
-             ls -lha /root/.rit
              echo "RIT ADD REPO -------------"
              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
              echo "RIT FORMULA HELLO WORLD -------------"
              rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
+#             echo "RIT DEFAULT RUNNER -------------"
+#             cat /root/.rit/default-formula-runner
+#             echo ""
+#             rit show formula-runner
+#             echo "SET DEFAULT RUNNER -------------"
+#             rit set formula-runner --runner="local"
+#             echo "RIT DEFAULT RUNNER -------------"
+#             cat /root/.rit/default-formula-runner
+#             echo ""
+#             rit show formula-runner
+#             echo "/RIT -------------"
+#             ls -lha /root/.rit
+
 
 # jobs:
 #   container:
