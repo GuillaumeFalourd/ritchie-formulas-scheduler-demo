@@ -25,4 +25,4 @@ He also said that if the delay time is too long, the scheduled workflow may be n
 
 ## Docker Images with Ritchie CLI
 
-You can find some Dockerfile with Ritchie installed and initialized on this [Github repository](https://github.com/GuillaumeFalourd/ritchie-docker-images) or the related Docker images on this [Docker Hub](https://hub.docker.com/repository/docker/guillaumefalourd/ritchiecli).
+You can find some Dockerfile examples with Ritchie installed and initialized on this [Github repository](https://github.com/GuillaumeFalourd/ritchie-docker-images) or the related Docker images on this [Docker Hub](https://hub.docker.com/repository/docker/guillaumefalourd/ritchiecli).
