@@ -12,7 +12,6 @@ jobs:
         image: docker://guillaumefalourd/ritchiecli:go-1.15.8
         options: --user root
       steps:
-        - uses: actions/checkout@v2
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
