@@ -13,7 +13,8 @@ jobs:
         options: --user root
       steps:
         - id: execute-hello-world-formula
-          name: Execute Ritchie Formula Hello World
+        - uses: actions/checkout@v1
+        - name: Execute Ritchie Formula Hello World
           run: |
             echo "USER -------------"
             whoami
