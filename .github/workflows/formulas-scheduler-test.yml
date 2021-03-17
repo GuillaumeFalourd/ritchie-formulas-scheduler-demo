@@ -15,7 +15,7 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
-            echo "USER -------------""
+            echo "USER -------------"
             whoami
             echo "/RIT -------------"
             ls -lha /root/.rit
