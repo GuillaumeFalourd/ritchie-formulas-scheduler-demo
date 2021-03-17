@@ -10,11 +10,11 @@ jobs:
       runs-on: ubuntu-latest
       container: 
         image: docker://guillaumefalourd/ritchiecli:go-1.15.8
+        options: --user 1000
       steps:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
-            sudo su
             rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
             
