@@ -22,3 +22,7 @@ In a discussion in the GitHub Support Community ([No assurance on scheduled jobs
 He also said that if the delay time is too long, the scheduled workflow may be not triggered at that day. Therefore, it's not recommended to use GitHub Actions scheduled workflows for production tasks that require execution guarantee.
 
 [Source](https://upptime.js.org/blog/2021/01/22/github-actions-schedule-not-working/)
+
+## Docker Images with Ritchie CLI
+
+You can find some Docker images with Ritchie installed and initialized [on this repository]([https://github.com/GuillaumeFalourd/ritchie-docker-images)
