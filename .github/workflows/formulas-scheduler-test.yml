@@ -12,10 +12,10 @@ jobs:
         image: docker://guillaumefalourd/ritchiecli:go-1.15.8
         options: --user root
       steps:
-        - id: execute-hello-world-formula
-        - name: Execute Ritchie Formula Hello World
         - uses: actions/checkout@v1
-        - run: |
+        - id: execute-hello-world-formula
+          name: Execute Ritchie Formula Hello World
+          run: |
             echo "USER -------------"
             whoami
             echo "/RIT -------------"
