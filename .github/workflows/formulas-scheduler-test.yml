@@ -15,11 +15,6 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
-            echo "USER -------------"
-            whoami
-            echo "/RIT -------------"
-            ls -lha /root/.rit
-            echo "FORMULA -------------"
             sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
             sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
             
