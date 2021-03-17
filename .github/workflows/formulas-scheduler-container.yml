@@ -13,6 +13,5 @@ jobs:
         - id: execute-hello-world-formula
           name: Ritchie Formula Hello World (Golang) Execution
           run: |
-             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
-             rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
+             sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+             sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
