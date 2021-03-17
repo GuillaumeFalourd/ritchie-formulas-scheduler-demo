@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  container:
+  test:
       runs-on: ubuntu-latest
       container: 
         image: docker://guillaumefalourd/ritchiecli:go-1.15.8
@@ -16,9 +16,6 @@ jobs:
           run: |
             sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
             sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
-            
-#cp -r /root/.rit /github/home
-
             
 # jobs:
 #   container:
@@ -38,46 +35,23 @@ jobs:
 #              ls -lha /root/.rit
 #              echo "GITHUB -------------"
 #              ls -lha /github/home
+#              echo "COPY /.RIT FROM ROOT TO GITHUB/HOME -------------"
 #              cp -r /root/.rit /github/home
+#              echo "GITHUB BIS -------------"
 #              ls -lha /github/home
-#             echo "RIT DEFAULT RUNNER -------------"
-#             cat /root/.rit/default-formula-runner
-#             echo ""
-#             rit show formula-runner
-#             echo "SET DEFAULT RUNNER -------------"
-#             rit set formula-runner --runner="local"
-#             echo "RIT DEFAULT RUNNER -------------"
-#             cat /root/.rit/default-formula-runner
-#             echo ""
-#             rit show formula-runner
-#             echo "/RIT -------------"
-#             ls -lha /root/.rit
-#             echo "RIT ADD REPO -------------"
-#             rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-#             echo "RIT FORMULA HELLO WORLD -------------"
-#             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
-
-
-# jobs:
-#   container:
-#       runs-on: ubuntu-latest
-#       container: docker://guillaumefalourd/ritchiecli:shell-bat
-#       steps:
-#         - id: execute-hello-world-formula
-#           name: Execute Ritchie Formula Hello World
-#           run: |
-#               rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-#               rit demo coffee-shell --rit_name="Dennis" --rit_coffee_type="espresso" --rit_delivery=true
-              
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: docker://guillaumefalourd/ritchiecli:go-1.15.8
-#       - id: execute-hello-world-formula
-#         name: Execute Ritchie Formula Hello World
-#         run: |
-#             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
-#             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
-#             rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-#             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
+#              echo "RIT DEFAULT RUNNER -------------"
+#              cat /root/.rit/default-formula-runner
+#              echo ""
+#              rit show formula-runner
+#              echo "SET DEFAULT RUNNER -------------"
+#              rit set formula-runner --runner="local"
+#              echo "RIT DEFAULT RUNNER -------------"
+#              cat /root/.rit/default-formula-runner
+#              echo ""
+#              rit show formula-runner
+#              echo "/RIT -------------"
+#              ls -lha /root/.rit
+#              echo "RIT ADD REPO -------------"
+#              rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+#              echo "RIT FORMULA HELLO WORLD -------------"
+#              rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
