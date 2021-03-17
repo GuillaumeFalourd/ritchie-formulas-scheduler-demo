@@ -21,6 +21,8 @@ jobs:
              find / -name ".rit"
              echo "/RIT -------------"
              ls -lha /root/.rit
+             echo "GITHUB /RIT -------------"
+             ls -lha /github/home/.rit
              echo "RIT DEFAULT RUNNER -------------"
              cat /root/.rit/default-formula-runner
              echo ""
