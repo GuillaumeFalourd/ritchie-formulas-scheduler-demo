@@ -9,9 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - id: execute-hello-world-formula
-        name: Ritchie Formula Hello World (Golang) Execution
-        run: |
+       - name: Ritchie Formula Hello World (Golang) Execution
+         run: |
             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
             rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
