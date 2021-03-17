@@ -14,21 +14,30 @@ jobs:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
           run: |
-             export RIT_PATH=/root/.rit
-             PATH=$RIT_PATH/bin:$PATH
-             rit -v
-             echo "PATH -------------"
-             find / -name ".rit"
-             echo "/RIT -------------"
-             ls -lha /root/.rit
-             echo "GITHUB -------------"
-             ls -lha /github/home
-             cp -r /root/.rit /github/home
-             ls -lha /github/home
-             echo "RIT ADD REPO -------------"
-             rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-             echo "RIT FORMULA HELLO WORLD -------------"
-             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
+            cp -r /root/.rit /github/home
+            rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+            rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
+            
+# jobs:
+#   container:
+#       runs-on: ubuntu-latest
+#       container: 
+#         image: docker://guillaumefalourd/ritchiecli:go-1.15.8
+#       steps:
+#         - id: execute-hello-world-formula
+#           name: Execute Ritchie Formula Hello World
+#           run: |
+#              export RIT_PATH=/root/.rit
+#              PATH=$RIT_PATH/bin:$PATH
+#              rit -v
+#              echo "PATH -------------"
+#              find / -name ".rit"
+#              echo "/RIT -------------"
+#              ls -lha /root/.rit
+#              echo "GITHUB -------------"
+#              ls -lha /github/home
+#              cp -r /root/.rit /github/home
+#              ls -lha /github/home
 #             echo "RIT DEFAULT RUNNER -------------"
 #             cat /root/.rit/default-formula-runner
 #             echo ""
@@ -41,6 +50,10 @@ jobs:
 #             rit show formula-runner
 #             echo "/RIT -------------"
 #             ls -lha /root/.rit
+#             echo "RIT ADD REPO -------------"
+#             rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+#             echo "RIT FORMULA HELLO WORLD -------------"
+#             rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie"
 
 
 # jobs:
