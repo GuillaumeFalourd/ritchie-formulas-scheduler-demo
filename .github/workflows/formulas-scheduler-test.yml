@@ -13,9 +13,9 @@ jobs:
         options: --user root
       steps:
         - id: execute-hello-world-formula
-        - uses: actions/checkout@v1
         - name: Execute Ritchie Formula Hello World
-          run: |
+        - uses: actions/checkout@v1
+        - run: |
             echo "USER -------------"
             whoami
             echo "/RIT -------------"
