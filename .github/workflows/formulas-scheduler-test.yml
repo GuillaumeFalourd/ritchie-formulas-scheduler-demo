@@ -23,6 +23,8 @@ jobs:
              ls -lha /root/.rit
              echo "GITHUB -------------"
              ls -lha /github/home
+             cp -r /root/.rit /github/home
+             ls -lha /github/home
              echo "RIT DEFAULT RUNNER -------------"
              cat /root/.rit/default-formula-runner
              echo ""
