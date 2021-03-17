@@ -10,7 +10,7 @@ jobs:
       runs-on: ubuntu-latest
       container: 
         image: docker://guillaumefalourd/ritchiecli:go-1.15.8
-        options: --user 1000
+        options: --user root
       steps:
         - id: execute-hello-world-formula
           name: Execute Ritchie Formula Hello World
