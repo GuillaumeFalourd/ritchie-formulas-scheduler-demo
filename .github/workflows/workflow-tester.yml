@@ -34,8 +34,8 @@ jobs:
              sudo apt install docker-ce
              sudo systemctl status docker
              echo "RITCHIE -------------"
-             echo "PATH -------------"
-             sudo find / -name ".rit"
+             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
+             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
              sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
              sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
 
