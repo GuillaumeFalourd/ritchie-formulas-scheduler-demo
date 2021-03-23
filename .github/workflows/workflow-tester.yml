@@ -22,9 +22,8 @@ jobs:
   test:  
       runs-on: ubuntu-latest
       steps:
-        - name: Ritchie Formula Hello World (Golang) Execution
+        - name: Installing Docker
           run: |
-             echo "DOCKER -------------" 
              sudo apt update
              sudo apt install apt-transport-https ca-certificates curl software-properties-common
              curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -33,7 +32,9 @@ jobs:
              apt-cache policy docker-ce
              sudo apt install docker-ce
              sudo systemctl status docker
-             echo "RITCHIE -------------"
+
+        - name: Ritchie Formula Hello World (Golang) Execution
+          run: |
              curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
              echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
              sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
