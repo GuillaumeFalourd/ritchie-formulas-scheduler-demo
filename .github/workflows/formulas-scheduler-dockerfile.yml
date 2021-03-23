@@ -20,9 +20,12 @@ jobs:
              sudo apt install docker-ce
              sudo systemctl status docker
              
-        - name: Ritchie Formula Hello World (Golang) Execution using formula Dockerfile
+        - name: Ritchie Installation & Initialization
           run: |
              curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
              echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
+
+        - name: Ritchie Formula Hello World (Golang) Execution using formula Dockerfile
+          run: |
              sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
              sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
