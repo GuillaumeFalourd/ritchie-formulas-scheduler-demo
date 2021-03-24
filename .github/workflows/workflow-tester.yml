@@ -38,8 +38,8 @@ jobs:
             EMAIL: ${{ secrets.EMAIL }}
           run: |
              docker pull mxrch/ghunt
-             docker run -v ghunt-resources:/usr/src/app/resources -ti mxrch/ghunt check_and_gen.py
-             docker run -v ghunt-resources:/usr/src/app/resources -ti mxrch/ghunt ghunt.py email $EMAIL
+             docker run -v ghunt-resources:/usr/src/app/resources mxrch/ghunt check_and_gen.py
+             docker run -v ghunt-resources:/usr/src/app/resources mxrch/ghunt ghunt.py email $EMAIL
 
 #         - name: Ritchie Formula Hello World (Golang) Execution
 #           run: |
