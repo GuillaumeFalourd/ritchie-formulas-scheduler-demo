@@ -33,12 +33,20 @@ jobs:
              sudo apt install docker-ce
              sudo systemctl status docker
 
-        - name: Ritchie Formula Hello World (Golang) Execution
+        - name: GHunt
+          env:
+            EMAIL: ${{ secrets.EMAIL }}
           run: |
-             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
-             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
-             sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-             sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
+             docker pull mxrch/ghunt
+             docker run -v ghunt-resources:/usr/src/app/resources -ti mxrch/ghunt check_and_gen.py
+             docker run -v ghunt-resources:/usr/src/app/resources -ti mxrch/ghunt ghunt.py email $EMAIL
+
+#         - name: Ritchie Formula Hello World (Golang) Execution
+#           run: |
+#              curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
+#              echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
+#              sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+#              sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
 
 # jobs:
 #   test:
