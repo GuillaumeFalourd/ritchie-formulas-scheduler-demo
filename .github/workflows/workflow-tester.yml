@@ -33,13 +33,13 @@ jobs:
              sudo apt install docker-ce
              sudo systemctl status docker
 
-        - name: GHunt
-          env:
-            EMAIL: ${{ secrets.EMAIL }}
+        - name: Teste
           run: |
-             docker pull mxrch/ghunt
-             docker run -v ghunt-resources:/usr/src/app/resources mxrch/ghunt check_and_gen.py
-             docker run -v ghunt-resources:/usr/src/app/resources mxrch/ghunt ghunt.py email $EMAIL
+             docker pull docker://guillaumefalourd/ritchiecli:go-1.15.8
+             docker container run --rm guillaumefalourd/ritchiecli:go-1.15.8
+             sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+             sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
+
 
 #         - name: Ritchie Formula Hello World (Golang) Execution
 #           run: |
