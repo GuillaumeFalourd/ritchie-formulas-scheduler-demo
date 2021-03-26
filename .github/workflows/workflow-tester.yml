@@ -33,20 +33,22 @@ jobs:
              sudo apt install docker-ce
              sudo systemctl status docker
 
-        - name: Teste
+        - name: Ritchie Formula Hello World (Golang) Execution
           run: |
-             docker pull guillaumefalourd/ritchiecli:go-1.15.8
-             docker container run --rm guillaumefalourd/ritchiecli:go-1.15.8
-             sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-             sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
+              curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
+              echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
+              sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+              sudo 
+
+#        - name: Teste
+#          run: |
+#             docker pull guillaumefalourd/ritchiecli:go-1.15.8
+#             docker container run --rm guillaumefalourd/ritchiecli:go-1.15.8
+#             sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
+#             sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
 
 
-#         - name: Ritchie Formula Hello World (Golang) Execution
-#           run: |
-#              curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
-#              echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
-#              sudo rit add repo --provider="Github" --name="demo" --repoUrl="https://github.com/ZupIT/ritchie-formulas-demo" --priority=1
-#              sudo rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
+rit demo hello-world --rit_input_text="Dennis" --rit_input_boolean=true --rit_input_list="everything" --rit_input_password="Ritchie" --docker
 
 # jobs:
 #   test:
