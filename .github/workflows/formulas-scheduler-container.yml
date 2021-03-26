@@ -8,7 +8,7 @@ on:
 jobs:
   build:
       runs-on: ubuntu-latest
-      container: 
+      container:
         image: docker://guillaumefalourd/ritchiecli:go-1.15.8
       steps:
         - name: Ritchie Formula Hello World (Golang) Execution
