@@ -19,7 +19,7 @@ jobs:
           --data '{"event_type": "pong", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
 
       - name: Ritchie Installation & Initialization
-         run: |
+        run: |
             curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
             echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
 
