@@ -5,6 +5,7 @@ on:
   schedule:
     - cron: '0 12 * * *'
   repository_dispatch:
+  workflow_dispatch:
 
 jobs:
   ping-pong:
@@ -16,7 +17,7 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
         run: |
-          curl -X POST https://api.github.com/repos/marcnuri-demo/actions-remote-dispatch-b/dispatches \
+          curl -X POST https://api.github.com/repos/GuillaumeFalourd/ritchie-formulas-scheduler-demo/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u $GITHUB_TOKEN \
           --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
