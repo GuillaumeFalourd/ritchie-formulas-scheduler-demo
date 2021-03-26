@@ -4,9 +4,9 @@ on:
   schedule:
   - cron: "0 16 * * *"
   workflow_dispatch:
-  
+
 jobs:
-  build:  
+  build:
       runs-on: ubuntu-latest
       steps:
         - name: Installing Docker
@@ -19,7 +19,7 @@ jobs:
              apt-cache policy docker-ce
              sudo apt install docker-ce
              sudo systemctl status docker
-             
+
         - name: Ritchie Installation & Initialization
           run: |
              curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
