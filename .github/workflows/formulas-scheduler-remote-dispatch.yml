@@ -10,7 +10,7 @@ jobs:
         run: |
           echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
 
-      - name: RESPONSE - Dispatch response to INIT repository
+      - name: RESPONSE - Dispatch response event to INIT repository
         if: github.event.action == 'formula-init'
         run: |
           curl -X POST https://api.github.com/repos/GuillaumeFalourd/poc-github-actions/dispatches \
