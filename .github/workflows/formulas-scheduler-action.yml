@@ -1,0 +1,17 @@
+name: Formulas Scheduler (Action)
+
+on:
+ schedule:
+    - cron: '0 0 * * *'
+ workflow_dispatch:
+
+jobs:
+  action_job:
+    runs-on: ubuntu-latest
+    name: Ritchie Action
+    steps:
+    - name: Run Ritchie Action Command
+      uses: GuillaumeFalourd/ritchie-docker-actions@v1.0
+      with:
+        rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
+        rit-formula-command: rit demo coffee-shell --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
