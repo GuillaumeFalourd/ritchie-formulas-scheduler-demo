@@ -15,7 +15,7 @@ jobs:
       with:
         rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
         rit-formula-command: rit demo coffee-shell --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
-    
+
     - name: Run NODE Ritchie Action Command
       uses: GuillaumeFalourd/ritchie-action-node@v1.1
       with:
@@ -33,7 +33,7 @@ jobs:
       with:
         rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
         rit-formula-command: rit demo coffee-java --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
-        
+
     - name: Run GOLANG Ritchie Action Command
       uses: GuillaumeFalourd/ritchie-action-go-15@v1.1
       with:
