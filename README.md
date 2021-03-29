@@ -18,7 +18,7 @@ It is also possible to use formulas with credentials adding [new secrets](https:
 
 ## A few words about Scheduled Jobs on Github Actions
 
-When you set up a GitHub Actions workflow with a **schedule**, say for once every 10 minutes, you're essentially requesting GitHub to schedule that workflow for you. There is no guarantee that the workflow will run every 10 minutes. 
+When you set up a GitHub Actions workflow with a **schedule**, say for once every 10 minutes, you're essentially requesting GitHub to schedule that workflow for you. There is no guarantee that the workflow will run every 10 minutes.
 
 In a discussion in the GitHub Support Community ([No assurance on scheduled jobs?](https://github.community/t/no-assurance-on-scheduled-jobs/133753)), Github partner @brightran](https://github.community/u/brightran/summary) said that many times, there may be a delay when triggering the scheduled workflow:
 
@@ -32,3 +32,11 @@ He also said that if the delay time is too long, the scheduled workflow may be n
 ## Docker Images with Ritchie CLI
 
 You can find some Dockerfile examples with Ritchie installed and initialized on this [Github repository](https://github.com/GuillaumeFalourd/ritchie-docker-images) or the related Docker images on this [Docker Hub](https://hub.docker.com/repository/docker/guillaumefalourd/ritchiecli).
+
+## Ritchie Actions
+
+- [Ritchie Action Shell](https://github.com/GuillaumeFalourd/ritchie-action-shell)
+- [Ritchie Action Python](https://github.com/GuillaumeFalourd/ritchie-action-python)
+- [Ritchie Action Node](https://github.com/GuillaumeFalourd/ritchie-action-node)
+- [Ritchie Action Java 8](https://github.com/GuillaumeFalourd/ritchie-action-java-8)
+- [Ritchie Action Go 15](https://github.com/GuillaumeFalourd/ritchie-action-go-15)
