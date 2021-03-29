@@ -1,14 +1,14 @@
-[![Formulas Scheduler (Default)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/1-formulas-scheduler.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/1-formulas-scheduler.yml)
+[![1 - Formulas Scheduler (Default)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/1-formulas-scheduler.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/1-formulas-scheduler.yml)
 
-[![Formulas Scheduler (Secrets)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/2-formulas-scheduler-secrets.yml/badge.svg)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/2-formulas-scheduler-secrets.yml)
+[![2 - Formulas Scheduler (Secrets)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/2-formulas-scheduler-secrets.yml/badge.svg)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/2-formulas-scheduler-secrets.yml)
 
-[![Formulas Scheduler (Dockerfile)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/3-formulas-scheduler-dockerfile.yml/badge.svg)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/3-formulas-scheduler-dockerfile.yml)
+[![3 - Formulas Scheduler (Dockerfile)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/3-formulas-scheduler-dockerfile.yml/badge.svg)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/3-formulas-scheduler-dockerfile.yml)
 
-[![Formulas Scheduler (Container)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/4-formulas-scheduler-container.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/4-formulas-scheduler-container.yml)
+[![4 - Formulas Scheduler (Container)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/4-formulas-scheduler-container.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/4-formulas-scheduler-container.yml)
 
-[![Formulas Scheduler (Action)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/5-formulas-scheduler-action.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/5-formulas-scheduler-action.yml)
+[![5 - Formulas Scheduler (Action)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/5-formulas-scheduler-action.yml/badge.svg)](https://github.com/GuillaumeFalourd/formulas-scheduler/actions/workflows/5-formulas-scheduler-action.yml)
 
-[![Formulas Scheduler (Remote Dispatch)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/6-formulas-scheduler-remote-dispatch.yml/badge.svg)](https://github.com/GuillaumeFalourd/6-ritchie-formulas-scheduler-demo/actions/workflows/formulas-scheduler-remote-dispatch.yml)
+[![6 - Formulas Scheduler (Remote Dispatch)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/6-formulas-scheduler-remote-dispatch.yml/badge.svg)](https://github.com/GuillaumeFalourd/6-ritchie-formulas-scheduler-demo/actions/workflows/formulas-scheduler-remote-dispatch.yml)
 
 # Formulas-scheduler
 
