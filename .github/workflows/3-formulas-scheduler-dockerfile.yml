@@ -1,4 +1,4 @@
-name: Formulas Scheduler (with Dockerfile)
+name: Formulas Scheduler (Dockerfile)
 
 on:
   schedule:
