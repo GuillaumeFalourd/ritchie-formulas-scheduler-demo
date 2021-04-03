@@ -11,31 +11,31 @@ jobs:
     name: Ritchie Action
     steps:
     - name: Run SHELL Ritchie Action Command
-      uses: GuillaumeFalourd/ritchie-action-shell@v1.1
+      uses: GuillaumeFalourd/ritchie-action-shell@v2.1
       with:
         rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
         rit-formula-command: rit demo coffee-shell --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
 
     - name: Run NODE Ritchie Action Command
-      uses: GuillaumeFalourd/ritchie-action-node@v1.1
+      uses: GuillaumeFalourd/ritchie-action-node@v2.0
       with:
         rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
         rit-formula-command: rit demo coffee-node --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
 
     - name: Run PYTHON Ritchie Action Command
-      uses: GuillaumeFalourd/ritchie-action-python@v1.1
+      uses: GuillaumeFalourd/ritchie-action-python@v2.0
       with:
         rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
         rit-formula-command: rit demo coffee-python --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
 
     - name: Run JAVA Ritchie Action Command
-      uses: GuillaumeFalourd/ritchie-action-java-8@v1.1
+      uses: GuillaumeFalourd/ritchie-action-java-8@v2.0
       with:
         rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
         rit-formula-command: rit demo coffee-java --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
 
     - name: Run GOLANG Ritchie Action Command
-      uses: GuillaumeFalourd/ritchie-action-go-15@v1.1
+      uses: GuillaumeFalourd/ritchie-action-go-15@v2.0
       with:
         rit-repo-url: https://github.com/ZupIT/ritchie-formulas-demo
         rit-formula-command: rit demo coffee-go --rit_name=Dennis --rit_coffee_type=espresso --rit_delivery=false
