@@ -35,6 +35,8 @@ You can find some Dockerfile examples with Ritchie installed and initialized on 
 
 ## Ritchie Actions
 
+You can find [Ritchie CLI actions on Github Marketplace](https://github.com/marketplace?type=actions&query=ritchie)!
+
 - [Ritchie Action Shell](https://github.com/GuillaumeFalourd/ritchie-action-shell)
 - [Ritchie Action Python](https://github.com/GuillaumeFalourd/ritchie-action-python)
 - [Ritchie Action Node](https://github.com/GuillaumeFalourd/ritchie-action-node)
