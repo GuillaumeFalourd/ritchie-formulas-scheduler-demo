@@ -1,4 +1,4 @@
-name: Formulas Scheduler (Dockerfile)
+name: 3 - Formulas Scheduler (Dockerfile)
 
 on:
   schedule:

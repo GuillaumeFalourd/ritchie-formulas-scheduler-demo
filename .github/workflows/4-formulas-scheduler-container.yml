@@ -1,4 +1,4 @@
-name: Formulas Scheduler (Container)
+name: 4 - Formulas Scheduler (Container)
 
 on:
   schedule:

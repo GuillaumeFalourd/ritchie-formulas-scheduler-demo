@@ -1,4 +1,4 @@
-name: Formulas Scheduler (Remote Dispatch)
+name: 6 - Formulas Scheduler (Remote Dispatch)
 
 on: [repository_dispatch]
 
