@@ -40,7 +40,7 @@ jobs:
   java-action_job:
     runs-on: ubuntu-latest
     name: Ritchie Action Java
-    needs: [python-action_job, node-action_job]
+    needs: [python-action_job, shell-action_job]
     steps:
     - name: Run JAVA Ritchie Action Command
       uses: GuillaumeFalourd/ritchie-action-java-8@v2.1
