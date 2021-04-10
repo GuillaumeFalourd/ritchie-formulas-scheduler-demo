@@ -30,7 +30,6 @@ jobs:
   python-action_job:
     runs-on: ubuntu-latest
     name: Ritchie Action Python
-    needs: [shell-action_job, node-action_job]
     steps:
     - name: Run PYTHON Ritchie Action Command
       uses: GuillaumeFalourd/ritchie-action-python@v2.1
