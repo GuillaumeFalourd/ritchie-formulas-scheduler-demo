@@ -3,7 +3,7 @@ name: 6 - Formulas Scheduler (Remote Dispatch)
 on: [repository_dispatch]
 
 jobs:
-  build:
+  expected-event:
     runs-on: ubuntu-latest
     if: github.event.action == 'Start Formula'
     steps:
@@ -29,7 +29,7 @@ jobs:
           --data '{"event_type": "Formula Response", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
 
 
-  unexpected event:
+  unexpected-event:
     runs-on: ubuntu-latest
     if: github.event.action != 'Start Formula'
     steps:
