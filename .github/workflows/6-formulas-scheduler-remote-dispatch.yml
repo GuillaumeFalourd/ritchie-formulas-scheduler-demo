@@ -3,15 +3,15 @@ name: 6 - Formulas Scheduler (Remote Dispatch)
 on: [repository_dispatch]
 
 jobs:
-  ping-pong:
+  build:
     runs-on: ubuntu-latest
+    if: github.event.action == 'formula-init'
     steps:
       - name: Event Information
         run: |
           echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
 
       - name: RESPONSE - Dispatch response event to INIT repository
-        if: github.event.action == 'formula-init'
         run: |
           curl -X POST https://api.github.com/repos/GuillaumeFalourd/poc-github-actions/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
