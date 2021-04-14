@@ -16,6 +16,8 @@ Repository with a Github Action workflow example to execute specific Ritchie CLI
 
 It is also possible to use formulas with credentials adding [new secrets](https://docs.github.com/pt/actions/reference/encrypted-secrets) to the repository.
 
+This repository has been used for the [Zup Innovation Office Hours on April 14, 2021](https://www.youtube.com/watch?v=wXmwWBQ9T7I&ab_channel=ZUP) (in portuguese). The presentation can be found [here](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/blob/main/office-hours-14042021-github-actions-with-ritchie-cli.pdf)
+
 ## A few words about Scheduled Jobs on Github Actions
 
 When you set up a GitHub Actions workflow with a **schedule**, say for once every 10 minutes, you're essentially requesting GitHub to schedule that workflow for you. There is no guarantee that the workflow will run every 10 minutes.
