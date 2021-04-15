@@ -1,9 +1,9 @@
-name: 7 - Workflow Run Formula
+name: 7 - Formula Scheduler (Backup)
 
 on:
   workflow_run:
     workflows: ["1 - Formulas Scheduler (Default)"]
-    types: [completed]
+    types: [completed] #requested
 
 jobs:
   on-success:
@@ -11,6 +11,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - run: echo "First workflow was a success"
+  
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}

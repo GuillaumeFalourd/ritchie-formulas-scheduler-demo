@@ -10,6 +10,8 @@
 
 [![6 - Formulas Scheduler (Remote Dispatch)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/6-formulas-scheduler-remote-dispatch.yml/badge.svg)](https://github.com/GuillaumeFalourd/6-ritchie-formulas-scheduler-demo/actions/workflows/formulas-scheduler-remote-dispatch.yml)
 
+[![7 - Formulas Scheduler (Backup)](https://github.com/GuillaumeFalourd/ritchie-formulas-scheduler-demo/actions/workflows/7-formulas-scheduler-backup.yml/badge.svg)](https://github.com/GuillaumeFalourd/6-ritchie-formulas-scheduler-demo/actions/workflows/7-formulas-scheduler-backup.yml)
+
 # Formulas-scheduler
 
 Repository with a Github Action workflow example to execute specific Ritchie CLI formulas using [CRON](https://crontab.guru/#*_*_*_*_*).
