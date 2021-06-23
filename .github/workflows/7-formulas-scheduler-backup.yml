@@ -20,7 +20,7 @@ jobs:
       - name: Ritchie Installation & Initialization
         run: |
           curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
-          echo '{"addCommons":false, "sendMetrics":true, "runType":"local"}' | rit init --stdin
+          echo '{"addCommons":false, "sendMetrics":false, "runType":"local"}' | rit init --stdin
 
       - name: Ritchie Formula Hello World (Golang) Execution
         run: |
