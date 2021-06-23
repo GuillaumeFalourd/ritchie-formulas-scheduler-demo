@@ -52,3 +52,5 @@ You can find [Ritchie CLI actions on Github Marketplace](https://github.com/mark
 - [Ritchie Action Node](https://github.com/GuillaumeFalourd/ritchie-action-node)
 - [Ritchie Action Java 8](https://github.com/GuillaumeFalourd/ritchie-action-java-8)
 - [Ritchie Action Go 15](https://github.com/GuillaumeFalourd/ritchie-action-go-15)
+
+All in on: [Ritchie CLI Action](https://github.com/GuillaumeFalourd/ritchie-cli-action)
